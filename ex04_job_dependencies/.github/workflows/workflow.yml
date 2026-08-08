@@ -1,0 +1,17 @@
+name: job dependencies
+
+on: push
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: "actions/checkout@v4"
+      - run: echo "Backend tests running"
+  frontend:
+    runs-on: ubuntu-latest
+    needs: frontend
+    steps:
+      - uses: "actions/checkout@v4"
+      - run: echo "Frontend tests running"
+  
