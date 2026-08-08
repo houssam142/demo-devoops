@@ -1,8 +1,8 @@
-name: say hello
+name: Hello ZeroOps
 on: push
 
 jobs:
-  hello-world:
+  hello:
     steps:
-      run: echo "hello world"
+      run: echo "hello"
     
