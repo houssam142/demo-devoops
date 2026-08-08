@@ -1,0 +1,11 @@
+name: Secrets
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      API_KEY: ${{ secrets.API_KEY }}
+    steps:
+      - run: echo "Key length":" ${#API_KEY}"
